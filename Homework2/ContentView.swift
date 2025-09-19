@@ -52,7 +52,7 @@ struct ContentView: View {
             // Penguin group
             ZStack {
                 // Feet
-                HStack(spacing: 80) {
+                HStack(spacing: 73) {
                     Capsule(style: .circular)
                         .fill(.orange)
                         .frame(width: 70, height: 28)
@@ -62,15 +62,15 @@ struct ContentView: View {
                         .frame(width: 70, height: 28)
                         .rotationEffect(.degrees(-8))
                 }
-                .offset(y: 160)
+                .offset(y: 168)
 
-                // Body (dark)
+                // Body
                 Ellipse()
                     .fill(Color.black)
                     .frame(width: 220, height: 300)
                     .offset(y: 40)
 
-                // Belly (white)
+                // Belly
                 Ellipse()
                     .fill(Color.white)
                     .frame(width: 160, height: 220)
@@ -79,13 +79,13 @@ struct ContentView: View {
                 // Wings
                 Ellipse()
                     .fill(Color.black)
-                    .frame(width: 80, height: 130)
-                    .rotationEffect(.degrees(18))
+                    .frame(width: 70, height: 180)
+                    .rotationEffect(.degrees(30))
                     .offset(x: -120, y: 30)
                 Ellipse()
                     .fill(Color.black)
-                    .frame(width: 80, height: 130)
-                    .rotationEffect(.degrees(-18))
+                    .frame(width: 70, height: 180)
+                    .rotationEffect(.degrees(-30))
                     .offset(x: 120, y: 30)
 
                 // Head (dark)
@@ -94,7 +94,7 @@ struct ContentView: View {
                     .frame(width: 150, height: 150)
                     .offset(y: -80)
 
-                // Face mask (white)
+                // Face mask
                 Circle()
                     .fill(Color.white)
                     .frame(width: 120, height: 120)
@@ -112,15 +112,15 @@ struct ContentView: View {
                 .offset(y: -80)
 
                 // Eye highlights
-                HStack(spacing: 36) {
+                HStack(spacing: 45) {
                     Circle()
                         .fill(Color.white.opacity(0.9))
                         .frame(width: 6, height: 6)
-                        .offset(x: -2, y: -2)
+                        .offset(x: -1, y: 3)
                     Circle()
                         .fill(Color.white.opacity(0.9))
                         .frame(width: 6, height: 6)
-                        .offset(x: -2, y: -2)
+                        .offset(x: -1, y: 3)
                 }
                 .offset(y: -86)
                 
@@ -137,29 +137,29 @@ struct ContentView: View {
                 }
                 .offset(y: -50)
 
-                // Beak (simple diamond using a rotated rounded rectangle)
+                // Beak
                 RoundedRectangle(cornerRadius: 6, style: .continuous)
                     .fill(Color.orange)
                     .frame(width: 22, height: 22)
                     .rotationEffect(.degrees(45))
                     .offset(y: -52)
 
-                // Belly button detail
+                // Belly button
                 Circle()
                     .stroke(Color.gray.opacity(0.2), lineWidth: 2)
                     .frame(width: 22, height: 22)
                     .offset(y: 90)
                 
-                Text("Emperor Penguin")
+                Text("Emperor Penguin" )
                     .font(.largeTitle.bold())
                     .foregroundStyle(.blue.gradient)
-                .offset(y: -250)
+                .offset(y: -270)
                 
                 Text("Aptenodytes forsteri")
-                    .font(.title3)
+                    .font(.title)
                     .italic()
                     .foregroundStyle(.blue.gradient)
-                .offset(y: -210)
+                .offset(y: -230)
             }
         }
         .font(.system(size: 24, weight: .bold, design: .rounded))
